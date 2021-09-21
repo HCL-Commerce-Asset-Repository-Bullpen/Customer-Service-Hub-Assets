@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?>
+<!DOCTYPE Policies SYSTEM "../dtd/accesscontrolpolicies.dtd">
+
+<Policies>
+	
+ 	<ResourceCategory Name="com.hcl.commerce.order.commands.CSROrderItemAdjustmentCmdResourceCategory"
+			ResourceBeanClass="com.hcl.commerce.order.commands.CSROrderItemAdjustmentCmd">
+		<ResourceAction Name="ExecuteCommand" />
+	</ResourceCategory>	
+
+	<ResourceCategory Name="com.hcl.commerce.order.commands.CSROrderAdjustmentCmdResourceCategory"
+			ResourceBeanClass="com.hcl.commerce.order.commands.CSROrderAdjustmentCmd">
+		<ResourceAction Name="ExecuteCommand" />
+	</ResourceCategory>	
+
+	<ResourceCategory Name="com.hcl.commerce.order.commands.CSRShippingAdjustmentCmdResourceCategory"
+			ResourceBeanClass="com.hcl.commerce.order.commands.CSRShippingAdjustmentCmd">
+		<ResourceAction Name="ExecuteCommand" />
+	</ResourceCategory>		
+	
+	<ResourceGroup Name="BecomeUserCmdsResourceGroup"  OwnerID="RootOrganization">
+		<ResourceGroupResource Name="com.hcl.commerce.order.commands.CSROrderItemAdjustmentCmdResourceCategory" />
+		<ResourceGroupResource Name="com.hcl.commerce.order.commands.CSROrderAdjustmentCmdResourceCategory" />
+		<ResourceGroupResource Name="com.hcl.commerce.order.commands.CSRShippingAdjustmentCmdResourceCategory" />
+	</ResourceGroup>
+ 
+	<ResourceGroup Name="AllSiteUserCmdResourceGroup"  OwnerID="RootOrganization">
+		<ResourceGroupResource Name="com.hcl.commerce.order.commands.CSROrderItemAdjustmentCmdResourceCategory" />
+		<ResourceGroupResource Name="com.hcl.commerce.order.commands.CSROrderAdjustmentCmdResourceCategory" />
+		<ResourceGroupResource Name="com.hcl.commerce.order.commands.CSRShippingAdjustmentCmdResourceCategory" />
+	</ResourceGroup>
+ 
+</Policies>
